@@ -23,7 +23,7 @@ function NewTaskForm({categories, onTaskFormSubmit}) {
       );
     }
   })
-
+  
 
   function handleSubmit(event){
     event.preventDefault();
