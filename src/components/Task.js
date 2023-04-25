@@ -1,7 +1,6 @@
 import React from "react";
 
 function Task({text, category, onDeleteTask}) {
-  // const {text, category} = task;
   console.log(text);
 
   function handleDeleteClick(text){

@@ -1,6 +1,6 @@
 import React from "react";
 
-function CategoryFilter({categories, seletectedCategory: selectedCategory, onChangeCategory}) {
+function CategoryFilter({categories, onChangeCategory}) {
 
   function handleClick(event, category){
     onChangeCategory(category);
