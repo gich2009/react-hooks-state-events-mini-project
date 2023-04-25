@@ -1,7 +1,8 @@
 import React from "react";
 
 function Task({task, onDeleteTask}) {
-  // const {text, category} = task;
+  const {text, category} = task;
+  console.log(text);
 
   function handleDeleteClick(text){
     onDeleteTask(text);  
@@ -9,9 +10,9 @@ function Task({task, onDeleteTask}) {
 
   return (
     <div className="task">
-      <div className="label">{task.category}</div>
-      <div className="text">{task.text}</div>
-      <button className="delete" onClick={() => handleDeleteClick(task.text)}>X</button>
+      <div className="label">{category}</div>
+      <div className="text">{text}</div>
+      <button className="delete" onClick={() => handleDeleteClick(text)}>X</button>
     </div>
   );
 }

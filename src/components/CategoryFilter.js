@@ -2,14 +2,15 @@ import React from "react";
 
 function CategoryFilter({categories, seletectedCategory: selectedCategory, onChangeCategory}) {
 
-  function handleClick(category){
+  function handleClick(event, category){
     onChangeCategory(category);
+    event.target.className = "selected";
   }
 
   
   const categoryElements = categories.map((category) => {
     return (
-      <button key={category} className={selectedCategory === category ? "selected" : ""} onClick={() => handleClick(category)}>
+      <button key={category} className="" onClick={(event) => handleClick(event, category)}>
         {category}
       </button>);
     });
